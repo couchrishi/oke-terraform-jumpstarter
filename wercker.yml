@@ -1,6 +1,5 @@
 box: debian:stable-slim
 build:
   steps:
-      - owner/saibalaji4@1.0.0:
-             - terraform
+      - saibalaji4/terraform-install-latest@1.0.0
             
