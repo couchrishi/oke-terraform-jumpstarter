@@ -1,5 +1,5 @@
 box: debian:stable-slim
 build:
   steps:
-      - saibalaji4/terraform-install-latest@1.0.5
+      - saibalaji4/terraform-install-latest@1.0.6
             
