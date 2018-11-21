@@ -1,9 +1,0 @@
-
-# OCI authentication
-oci_tenancy_ocid="ocid1.tenancy.oc1..aaaaaaaaagu5i6dqrueyt7dtjvh6wfznnolulmcblcov545gqhbbpw76an6a"
-oci_user_ocid="ocid1.user.oc1..aaaaaaaatks2243dz5rtbbactzjaowbme2uqtuvalhanrin3kb2onlgq5vta"
-oci_fingerprint="6a:9b:a6:55:6d:c6:64:60:84:dd:4c:9a:79:1e:73:2a"
-oci_private_key_path="OCI_api_key.pem"
-compartment_ocid="ocid1.compartment.oc1..aaaaaaaayoafyp6nrmawigns5qaomfuzb5wpdu23e5ry7ccwldhsyha5vv5a"
-oci_ssh_public_key="ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAqykqbrV/bDMHRYmhok2W1vCKpekcuouREsfofTrCCnx6whQr+7bHlrcnPCN2Bw+EXK9NRSntu4TAfyXEPzIxGmDWadlRgDxlI2F6L/tO4tBxQZdJKJ8evDfRGWKzwADfKwOCDpc6q9KjfRU3wPSLhbCl78t+2hellEdOrmGRyCQWI03KYqpM0hnrFLBhVYj8QyvMcZjS8+sanfwyRBkapSLJ7rXtEKMYh1FpORUU16NN1xTKraKPGgEErYt7s9u2tzl2fziiCXHPLbAqd+AqvTGTTE94x1ESHzkXnyhnruGiwmsgDjNlbbTcSjffoeRKkAF9yZKGZ/GAGM9w7cKIaQ== rsa-key-20180113"
-oci_ssh_private_key="tflab_instance_pvt.ppk"
