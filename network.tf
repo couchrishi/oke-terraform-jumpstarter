@@ -50,7 +50,7 @@ resource "oci_core_security_list" "workers" {
 
   ingress_security_rules = [
     {
-      tcp_options {
+      tcp_options = {
         "max" = 32767
         "min" = 30000
       }
@@ -58,7 +58,7 @@ resource "oci_core_security_list" "workers" {
       source   = "0.0.0.0/0"
     },
     {
-      tcp_options {
+      tcp_options = {
         "max" = 22
         "min" = 22
       }
@@ -67,7 +67,7 @@ resource "oci_core_security_list" "workers" {
     },
 
       {
-      tcp_options {
+      tcp_options = {
         "max" = 22
         "min" = 22
       }
@@ -76,7 +76,7 @@ resource "oci_core_security_list" "workers" {
     },
 
     {
-      tcp_options {
+      tcp_options = {
         "max" = 22
         "min" = 22
       }
@@ -85,7 +85,7 @@ resource "oci_core_security_list" "workers" {
     },
 
     {
-      icmp_options {
+      icmp_options = {
         "type" = 3
         "code" = 4
       }

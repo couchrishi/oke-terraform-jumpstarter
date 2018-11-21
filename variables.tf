@@ -68,11 +68,3 @@ variable "lbshape" {
 variable "AD" {
   default = "1"
 }
-
-variable "2TB" {
-  default = "2097152"
-}
-
-variable "50GB" {
-  default = "51200"
-}
