@@ -1,7 +1,7 @@
 box: debian:stable-slim
 build:
   steps:
-      - saibalaji4/terraform-install-latest@1.0.9:
+      - saibalaji4/terraform-install-latest@1.0.10:
           command: plan
           var_file: $TERRAFORM_VAR_FILE
             
