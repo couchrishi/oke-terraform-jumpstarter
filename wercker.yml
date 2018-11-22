@@ -9,10 +9,11 @@ build:
         code: |
           curl -X GET "$OBJECT_STORAGE_URL_USER_API_KEY"
           curl -X GET "$OBJECT_STORAGE_URL_SSH_PUB_KEY"
+          ls -a
           mv $OCI_USER_API_KEY_NAME $WERCKER_ROOT
           mv $OBJECT_STORAGE_URL_SSH_PUB_KEY $WERCKER_ROOT
           OCI_PRIVATE_KEY_PATH=$WERCKER_ROOT/$OCI_USER_API_KEY_NAME
-          
+
           export $OCI_PRIVATE_KEY_PATH
           export $OCI_SSH_PUBLIC_KEY= $(cat ${OCI_VM_SSH_KEY_NAME})
           export $OCI_USER_FINGERPRINT
