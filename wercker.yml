@@ -5,6 +5,8 @@ build:
         name: Set Terraform variables
         code: |
           #export $OCI_USER_API_KEY | awk '{gsub(/\\n/,"\n")}1'
+          echo $OCI_USER_API_KEY_INPUT
+          
           awk -v OCI_USER_API_KEY= "$OCI_USER_API_KEY_INPUT" 'BEGIN {print OCI_USER_API_KEY}'
           awk -v OCI_SSH_PRIVATE_KEY= "$OCI_SSH_PRIVATE_KEY_INPUT" 'BEGIN {print OCI_SSH_PRIVATE_KEY}'
 
