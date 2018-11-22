@@ -21,7 +21,7 @@ build:
           #export $OCI_PRIVATE_KEY_PATH
           #export $OCI_SSH_PUBLIC_KEY= $(cat ${OCI_VM_SSH_KEY_NAME})
 
-      - saibalaji4/terraform-install-latest@1.0.22:
+      - saibalaji4/terraform-install-latest@1.0.23:
           command: plan
           var-file: terraform.tfvars
             
