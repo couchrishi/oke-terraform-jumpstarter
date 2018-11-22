@@ -16,6 +16,8 @@ build:
           echo "$OCI_COMPARTMENT_OCID" > terraform.tfvars
           echo "$OCI_USER_OCID" > terraform.tfvars
           echo "$OCI_REGION" > terraform.fvars
+
+          cat terraform.tfvars
           #export $OCI_PRIVATE_KEY_PATH
           #export $OCI_SSH_PUBLIC_KEY= $(cat ${OCI_VM_SSH_KEY_NAME})
 
