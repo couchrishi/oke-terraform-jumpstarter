@@ -10,15 +10,16 @@ build:
           wget "$OBJECT_STORAGE_URL_USER_API_KEY"
           wget "$OBJECT_STORAGE_URL_SSH_PUB_KEY"
           #OCI_PRIVATE_KEY_PATH=$PWD/$OCI_USER_API_KEY_NAME
-
-          export $OCI_USER_FINGERPRINT
-          export $OCI_TENANCY_OCID
-          export $OCI_COMPARTMENT_OCID
-          export $OCI_USER_OCID
-          export $OCI_REGION
+          touch terraform.tfvars
+          echo "$OCI_USER_FINGERPRINT" > terraform.tfvars
+          echo "$OCI_TENANCY_OCID" > terraform.tfvars
+          echo "$OCI_COMPARTMENT_OCID" > terraform.tfvars
+          echo "$OCI_USER_OCID" > terraform.tfvars
+          echo "$OCI_REGION" > terraform.fvars
           #export $OCI_PRIVATE_KEY_PATH
           #export $OCI_SSH_PUBLIC_KEY= $(cat ${OCI_VM_SSH_KEY_NAME})
 
       - saibalaji4/terraform-install-latest@1.0.16:
           command: plan
+          var-file: terraform.tfvars
             
