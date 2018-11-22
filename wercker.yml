@@ -1,7 +1,17 @@
 box: debian:stable-slim
 build:
   steps:
-      - saibalaji4/terraform-install-latest@1.0.15:
+      - script:
+        name: Set Terraform variables
+        code: |
+          export $OCI_USER_API_KEY
+          export $OCI_USER_FINGERPRINT
+          export $OCI_TENANCY_OCID
+          export $OCI_COMPARTMENT_OCID
+          export $OCI_SSH_PRIVATE_KEY
+          export $OCI_USER_OCID
+          export $OCI_REGION
+
+      - saibalaji4/terraform-install-latest@1.0.16:
           command: plan
-          var_file: $TERRAFORM_VAR_FILE
             
