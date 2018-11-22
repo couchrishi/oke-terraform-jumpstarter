@@ -13,7 +13,7 @@ build:
 
           export $OCI_USER_FINGERPRINT
           export $OCI_TENANCY_OCID
-          export $OCI_COMPARTMENT_OCID
+          export $COMPARTMENT_OCID
           export $OCI_USER_OCID
           export $OCI_REGION
           #export $OCI_PRIVATE_KEY_PATH
