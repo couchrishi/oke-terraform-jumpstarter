@@ -1,23 +1,22 @@
 box: debian:stable-slim
 build:
   steps:
+      - install-packages:
+            packages: curl
+
       - script:
         name: Set Terraform variables
         code: |
-          #export $OCI_USER_API_KEY | awk '{gsub(/\\n/,"\n")}1'
-          echo $OCI_USER_API_KEY_INPUT
-          
-          awk -v OCI_USER_API_KEY= "$OCI_USER_API_KEY_INPUT" 'BEGIN {print OCI_USER_API_KEY}'
-          awk -v OCI_SSH_PRIVATE_KEY= "$OCI_SSH_PRIVATE_KEY_INPUT" 'BEGIN {print OCI_SSH_PRIVATE_KEY}'
+          curl -x GET "$TF_KEYS_OBJECT_STORAGE_URL/${OCI_USER_API_KEY_NAME}"
+          curl -x GET "$TF_KEYS_OBJECT_STORAGE_URL/${OCI_VM_SSH_KEY_NAME}"
 
+          export $OCI_PRIVATE_KEY_PATH = ${OCI_USER_API_KEY_NAME}"
+          export $OCI_SSH_PUBLIC_KEY= $(cat $OCI_VM_SSH_KEY_NAME)
           export $OCI_USER_FINGERPRINT
           export $OCI_TENANCY_OCID
           export $OCI_COMPARTMENT_OCID
-          export $OCI_SSH_PRIVATE_KEY
           export $OCI_USER_OCID
           export $OCI_REGION
-          export $OCI_USER_API_KEY
-          export $OCI_SSH_PRIVATE_KEY
 
       - saibalaji4/terraform-install-latest@1.0.16:
           command: plan
