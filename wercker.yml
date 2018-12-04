@@ -19,6 +19,3 @@ build:
       - saibalaji4/terraform-install-latest@1.0.29:
           command: plan
           var_file: terraform.tfvars
-
-echo "$OCI_USER_FINGERPRINT
-$OCI_TENANCY_OCID" >> terraform.tfvars
