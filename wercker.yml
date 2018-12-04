@@ -12,6 +12,10 @@ build:
           #OCI_PRIVATE_KEY_PATH=$PWD/$OCI_USER_API_KEY_NAME
           cat >> terraform.tfvars <<EOD
           $OCI_USER_FINGERPRINT
+          $OCI_COMPARTMENT_OCID
+          $OCI_TENANCY_OCID
+          $OCI_USER_OCID
+          $OCI_REGION
           EOD
           cat terraform.tfvars
           #export $OCI_PRIVATE_KEY_PATH
