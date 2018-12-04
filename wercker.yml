@@ -13,6 +13,7 @@ build:
           cat >> terraform.tfvars <<EOD
           $OCI_USER_FINGERPRINT
           $OCI_COMPARTMENT_OCID
+          
           EOD
           cat terraform.tfvars
           #export $OCI_PRIVATE_KEY_PATH
