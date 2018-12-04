@@ -11,13 +11,11 @@ build:
           wget "$OBJECT_STORAGE_URL_SSH_PUB_KEY"
           #OCI_PRIVATE_KEY_PATH=$PWD/$OCI_USER_API_KEY_NAME
           cat >> terraform.tfvars <<EOD
-          <<EOF
           $OCI_USER_FINGERPRINT
           $OCI_COMPARTMENT_OCID
           $OCI_TENANCY_OCID
           $OCI_USER_OCID
           $OCI_REGION
-          EOF
           EOD
           cat terraform.tfvars
           #export $OCI_PRIVATE_KEY_PATH
